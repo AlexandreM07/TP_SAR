@@ -62,7 +62,13 @@ public class ChannelImplementation extends Channel{
 					}
 				}
 			} catch (ChannelDisconnectedException e) {
-				e.printStackTrace();
+				if(!this.isDisconnected) {
+					this.isDisconnected = true;
+					synchronized (this.outBuffer) {
+						this.outBuffer.notify();
+					}
+				}
+				throw e;
 			}
 			return readedBytes;
 		}
@@ -108,7 +114,13 @@ public class ChannelImplementation extends Channel{
 					}
 				}
 			} catch (ChannelDisconnectedException e) {
-				e.printStackTrace();
+				if(!this.isDisconnected) {
+					this.isDisconnected = true;
+					synchronized (this.inBuffer) {
+						this.inBuffer.notify();
+					}
+				}
+				throw e;
 			}
 			return writedBytes;
 		}

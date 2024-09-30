@@ -1,6 +1,7 @@
 package task1;
 
 public abstract class Task extends Thread{
+	/*
 	public Broker b;
 	public Runnable r;
 	
@@ -9,5 +10,5 @@ public abstract class Task extends Thread{
 		this.r = r;
 	}
 	
-	public static abstract Broker getBroker();
+	public static abstract Broker getBroker();*/
 }
