@@ -1,0 +1,33 @@
+Spécification Queue:
+Le niveau message s'appuie sur le niveau channel.
+Un QueueBroker utilise un broker.
+Un MessageQueue va utiliser un Channel pour read/write.
+On ne voit que des brokers et des channels.
+Deux tâches peuvent recevoir et s'envoyer des paquets au travers de MessageQueue.
+
+
+#Connecting
+
+Une message Queue est établie lorsque qu'un connect est accepté.
+Le connect est bloquant en attendant un accept et inversement. C'est un rendez-vous.
+Les fonctions accept et connect retourne un MessageQueue FIFO pleinement fonctionnel.
+Lorsque le broker qu'on veut connect n'existe pas, connect renvoie null. 
+
+#Envoie de packet
+On donne un tableau de bytes.
+On précise avec offset, à partir de quel indice du tableau envoyer le paquet. Le paquet envoyé sera
+de la forme suivante: [offset, offset+length]. Il faut que offset+length soit inférieur à la taille du tableau bytes.
+On envoie packets de bytes par packets de bytes.
+
+#Réception de paquet
+Lit le packet arrivé en premier dans la MessageQueue.
+
+
+#Fermeture des MessagesQueues
+
+#Broker
+Un broker est identifié de manière par un nom unique par univers de broker.
+Plusieurs connects simultanées sont possible sur un même port d'un même broker. Mais 1 seul accept à la fois sur un port.
+Une Task connait un broker. 
+
+#Multithreading
