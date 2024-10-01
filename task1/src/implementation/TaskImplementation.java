@@ -15,15 +15,12 @@ public class TaskImplementation extends Task{
 		this.broker = b;
 		this.id = java.util.UUID.randomUUID().toString();
 		this.thread = new Thread(this.runnable, this.id);
+		this.thread.start();
 	}
 	
 	public static Broker getBroker() {
 		Thread currentThread = Thread.currentThread();
 		TaskImplementation task = (TaskImplementation) currentThread;
 		return task.broker;
-	}
-	
-	public void start() {
-		this.thread.start();
 	}
 }
