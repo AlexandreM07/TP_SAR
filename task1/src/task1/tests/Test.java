@@ -1,7 +1,10 @@
 package task1.tests;
+import abstracts.Broker;
+import abstracts.Channel;
+import abstracts.Task;
+import implementation.BrokerImplementation;
+import implementation.ConcreateTask;
 import task1.*;
-import task1.implementation.BrokerImplementation;
-import task1.implementation.ConcreateTask;
 
 public class Test {
 	public static void main(String[] args) {

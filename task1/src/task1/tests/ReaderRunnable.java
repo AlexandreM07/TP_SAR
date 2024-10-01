@@ -1,6 +1,6 @@
 package task1.tests;
 
-import task1.Channel;
+import abstracts.Channel;
 
 public class ReaderRunnable implements Runnable{
 	private Channel channel;

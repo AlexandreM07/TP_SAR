@@ -1,7 +1,7 @@
-package task1.implementation;
+package implementation;
 
-import task1.Broker;
-import task1.Channel;
+import abstracts.Broker;
+import abstracts.Channel;
 
 public class RDV {
 	private Broker bAccept, bConnect;

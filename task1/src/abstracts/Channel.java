@@ -1,6 +1,6 @@
-package task1;
+package abstracts;
 
-import task1.implementation.ChannelDisconnectedException;
+import implementation.ChannelDisconnectedException;
 
 public abstract class Channel {
 	

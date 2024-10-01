@@ -1,7 +1,7 @@
-package task1.implementation;
+package implementation;
 
-import task1.Broker;
-import task1.Task;
+import abstracts.Broker;
+import abstracts.Task;
 
 public class TaskImplementation extends Task{
 	private String id;

@@ -1,4 +1,4 @@
-package task1.implementation;
+package implementation;
 
 public class ChannelDisconnectedException extends Exception{
 

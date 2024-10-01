@@ -1,10 +1,10 @@
-package task1.implementation;
+package implementation;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import task1.Broker;
-import task1.Channel;
+import abstracts.Broker;
+import abstracts.Channel;
 
 public class BrokerImplementation extends Broker{
 	private BrokerManager brokerManager;
@@ -14,6 +14,7 @@ public class BrokerImplementation extends Broker{
 		super(name);
 		this.brokerManager = brokerManager;
 		this.acceptMap = new HashMap<Integer, RDV>();
+		this.brokerManager.addBroker(this.name, this);
 	}
 
 	@Override

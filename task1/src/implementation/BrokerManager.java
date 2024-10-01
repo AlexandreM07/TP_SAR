@@ -1,9 +1,9 @@
-package task1.implementation;
+package implementation;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import task1.Broker;
+import abstracts.Broker;
 
 public class BrokerManager {
 	private Map<String, Broker> brokerMap;

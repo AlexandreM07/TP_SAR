@@ -1,6 +1,6 @@
-package task1.implementation;
+package implementation;
 
-import task1.Channel;
+import abstracts.Channel;
 
 public class ChannelImplementation extends Channel{
 	private ChannelManager channelManager;
