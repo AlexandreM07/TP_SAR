@@ -1,9 +1,10 @@
-package implementation;
+package implementation.threads;
 
 import java.nio.charset.StandardCharsets;
 
 import abstracts.Channel;
-import abstracts.QueueChannel;
+import abstracts.threads.QueueChannel;
+import implementation.ChannelDisconnectedException;
 import tests.Logger;
 
 public class QueueChannelImplementation extends QueueChannel{

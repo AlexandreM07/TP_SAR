@@ -1,9 +1,11 @@
-package implementation;
+package implementation.event;
 
 import abstracts.Broker;
 import abstracts.Channel;
-import abstracts.QueueBroker;
-import abstracts.QueueChannel;
+import abstracts.threads.QueueBroker;
+import abstracts.threads.QueueChannel;
+import implementation.BrokerImplementation;
+import implementation.BrokerManager;
 
 public class QueueBrokerImplementation extends QueueBroker{
 	private String name;
@@ -15,21 +17,23 @@ public class QueueBrokerImplementation extends QueueBroker{
 		this.brokerManager = brokerManager;
 		this.broker = new BrokerImplementation(name, brokerManager);
 	}
-	
-	@Override
-	public QueueChannel accept(int port) {
-    	Channel serverChannel = this.broker.accept(port);
-    	return new QueueChannelImplementation(serverChannel);
-    }
 
 	@Override
-    public QueueChannel connect(String name, int port) {
-    	Channel clientChannel = this.broker.connect(name, port);
-    	return new QueueChannelImplementation(clientChannel);
-    }
-    
+	public QueueChannel accept(int port) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Override
-    public String getName() {
-    	return this.name;
-    }
+	public QueueChannel connect(String name, int port) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }

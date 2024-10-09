@@ -1,4 +1,4 @@
-package abstracts;
+package abstracts.threads;
 
 public abstract class QueueBroker {
 	
